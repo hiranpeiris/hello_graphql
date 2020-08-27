@@ -1,0 +1,32 @@
+{
+  "name": "hello_graphql",
+  "version": "1.0.0",
+  "description": "Created for Keeneye GraphQL tranning",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "babel ./src --out-dir dist",
+    "clean": "rimraf ./dist",
+    "build": "npm-run-all clean transpile",
+    "server": "node ./dist/index.js",
+    "prod": "npm-run-all build server",
+    "dev": "nodemon --exec babel-node ./src/index.js"
+  },
+  "author": "H.R. Hiran Peiris <hiranpeiris.sl@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.11.0",
+    "graphql": "^15.3.0",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.10.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "nodemon": "^2.0.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  }
+}
